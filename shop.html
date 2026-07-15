@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Products | TrendHive Global Enterprises</title>
+  <meta name="description" content="Browse office stationery, mobile accessories, home & kitchen, electronics accessories, fashion accessories and daily use products. Filter by category, brand, price and rating.">
+  <link rel="canonical" href="https://trendhiveglobal.in/shop.html">
+  <meta property="og:title" content="Shop All Products | TrendHive Global Enterprises">
+  <meta property="og:image" content="https://placehold.co/1200x630/2563EB/FFFFFF?text=Shop+TrendHive">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div data-include="header"></div>
+
+  <main id="main-content">
+    <div class="shop-header">
+      <div class="container">
+        <nav class="breadcrumbs"><a href="index.html">Home</a> / <span>Shop</span></nav>
+        <h1>Shop All Products</h1>
+      </div>
+    </div>
+
+    <div class="container shop-layout">
+      <!-- Filters Sidebar -->
+      <aside class="filters-panel mobile-hidden" id="filters-panel">
+        <div class="filter-group">
+          <h3>Category</h3>
+          <div id="category-filters"></div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Brand</h3>
+          <div id="brand-filters"></div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Price</h3>
+          <div class="price-slider-wrap">
+            <input type="range" id="price-slider" min="100" max="5000" step="50" value="5000" aria-label="Maximum price">
+            <div class="price-range-labels">
+              <span>₹100</span>
+              <span id="price-slider-value">₹5,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Customer Rating</h3>
+          <label class="filter-option rating-filter-option"><input type="radio" name="rating" value="4"><span class="stars">★★★★</span><span>&amp; up</span></label>
+          <label class="filter-option rating-filter-option"><input type="radio" name="rating" value="3"><span class="stars">★★★</span><span>&amp; up</span></label>
+          <label class="filter-option rating-filter-option"><input type="radio" name="rating" value="0" checked><span>All ratings</span></label>
+        </div>
+
+        <button class="btn btn-outline filters-clear" id="clear-filters">Clear All Filters</button>
+      </aside>
+
+      <!-- Product listing -->
+      <div>
+        <button class="btn btn-outline mobile-filter-toggle" data-mobile-filter-toggle style="margin-bottom:16px;">
+          Filters &amp; Sort
+        </button>
+
+        <div id="active-filter-chips" class="active-filter-chips"></div>
+
+        <div class="shop-toolbar">
+          <span class="result-count" id="result-count">Loading products…</span>
+          <select class="sort-select" id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+            <option value="newest">Newest First</option>
+          </select>
+        </div>
+
+        <div class="product-grid" id="shop-grid"></div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="js/includes.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
